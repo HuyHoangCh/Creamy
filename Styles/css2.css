@@ -230,3 +230,64 @@ body {
     position: relative;
     padding-left: 25px;
 }
+
+@media screen and (max-width: 768px) {
+    .sanphamtuongchung {
+        padding: 10px;
+    }
+
+    .sanphamtuongchung img {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        float: none;
+    }
+
+    .sanphamtuongchung .intro-text {
+        margin: 20px auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    .chandauduongden {
+        margin: 20px auto;
+        width: 80%;
+        height: auto;
+    }
+
+    .chandauduongden img {
+        width: 100%;
+        height: auto;
+    }
+
+    .chandauduongden-text {
+        margin: 20px auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    .bottom-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .menu nav {
+        gap: 20px;
+    }
+
+    .menu a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu nav {
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+}
