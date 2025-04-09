@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body><!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Toggle</title>
+    <link rel="stylesheet" href="Styles/css1.css">
+</head>
+<body>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <div class="menu-container">
+        <div class="menu-items">
+            <a href="#">Trang chủ</a>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Dịch vụ</a>
+            <a href="#">Liên hệ</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            let menu = document.querySelector(".menu-container");
+            let menuIcon = document.querySelector(".menu-icon");
+
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+                menuIcon.classList.remove("active"); // Trả về nút ba gạch
+            } else {
+                menu.style.display = "block";
+                menuIcon.classList.add("active"); // Đổi thành dấu X
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+</body>
+</html>
