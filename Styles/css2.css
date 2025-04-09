@@ -231,7 +231,7 @@ body {
     padding-left: 25px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width : 1244px ){
     .sanphamtuongchung {
         padding: 10px;
     }
