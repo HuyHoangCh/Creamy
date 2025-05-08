@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm - Creamy Tea</title>
+    <link rel="stylesheet" href="Styles/trasuakemdau.css">
+</head>
+<body>
+<div class="tong">
+    <div class="header">
+        <div class="tren">
+            <div class="iconcha">
+                <div class="icon">☰</div>
+            </div>
+            <div class="menu">
+                <nav>
+                    <a href="index.html">Trang Chủ</a>
+                    <a href="index2.html">Về Chúng Tôi</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="#">Tin Tức</a>
+                    <a href="#">Liên hệ</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-container" style="background-color: #FFF8E7;">
+        <div class="menu-header">
+            <h1>Sản Phẩm</h1>
+            <p><a href="index.html">Trang Chủ</a>><a href="menu.html">Sản Phẩm</a>><a href="milk-tea.html">Trà Sữa</a></p>
+        </div>
+
+        <div class="product-container">
+            <div class="product-image">
+                <img src="images/image/7_preview_rev_1.png" alt="Sản phẩm">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">TRÀ SỮA KEM DÂU TƯƠI</h1>
+                <div class="product-price">39,000đ</div>
+                <p class="topping-note">Chưa có topping</p>
+                
+                <div class="topping-section">
+                    <h3>Chọn Topping</h3>
+                    <div class="topping-options">
+                        <button class="topping-btn">Không</button>
+                        <button class="topping-btn">Đậu đỏ</button>
+                        <button class="topping-btn">Pudding</button>
+                        <button class="topping-btn">Thạch dừa</button>
+                        <button class="topping-btn">Thạch đen</button>
+                        <button class="topping-btn">Trân châu trắng</button>
+                        <button class="topping-btn">Trân châu hoàng kim</button>
+                        <button class="topping-btn">Kem cheese</button>
+                        <button class="topping-btn">Foam trứng</button>
+                        <button class="topping-btn">Trân châu đường đen</button>
+                    </div>
+                </div>
+
+                <div class="quantity-section">
+                    <h3>Chọn số lượng</h3>
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="quantity-input">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="add-to-cart">Thêm vào giỏ</button>
+                    <button class="buy-now">Xem giỏ hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div class="bottom-content">
+            <div class="logo">
+                <img src="Logo/logo.jpg" alt="Creamy Tea Logo">
+            </div>
+            <div class="info-container">
+                <div class="copyright">
+                    © CREAMY TEA . made by fresh cream
+                </div>
+                <div class="contact-info">
+                    <p class="address">Địa chỉ: 935/7/43C Bình giã / Vũng Tàu</p>
+                    <p class="email">Email: tranhuyhoang159753@gmail.com</p>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100065041573512&locale=vi_VN">
+                    <img src="images/facebook logos vector (AI, EPS, SVG, PDF, CDR) free download_preview_rev_1.png" alt="Facebook">
+                </a>
+                <a href="https://www.tiktok.com/@hoangtran.chm?lang=vi-VN">
+                    <img src="images/Tik Tok Icon Circle PNG Transparent With Clear Background ID 473286 _ TopPNG_preview_rev_1.png" alt="TikTok">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Menu toggle
+    document.querySelector('.icon').addEventListener('click', function() {
+        document.querySelector('.menu').classList.toggle('active');
+        this.classList.toggle('active');
+        this.innerHTML = this.classList.contains('active') ? '✖' : '☰';
+    });
+
+    // Quantity control
+    const quantityInput = document.querySelector('.quantity-input');
+    document.querySelector('.minus').addEventListener('click', () => {
+        if (quantityInput.value > 1) quantityInput.value--;
+    });
+    document.querySelector('.plus').addEventListener('click', () => {
+        quantityInput.value++;
+    });
+
+    // Topping selection
+    const toppingBtns = document.querySelectorAll('.topping-btn');
+    toppingBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
+        });
+    });
+</script>
+</body>
+</html>
