@@ -18,8 +18,8 @@
                     <a href="index.html">Trang Chủ</a>
                     <a href="index2.html">Về Chúng Tôi</a>
                     <a href="menu.html">Menu</a>
-                    <a href="#">Tin Tức</a>
-                    <a href="#">Liên hệ</a>
+                    <a href="tintuc.html">Tin Tức</a>
+                    <a href="#danhgia">Liên hệ</a>
                 </nav>
             </div>
         </div>
@@ -139,7 +139,7 @@
         <button class="gallery-next">❯</button>
     </div>
 </div>
-<div class="danhgia">
+<div class="danhgia" id="danhgia">
     <div class="danhgia-left">
         <h1>HELLO<br><span>CREAMY</span></h1>
     </div>
@@ -165,8 +165,10 @@
                     © CREAMY TEA . made by fresh cream
                 </div>
                 <div class="contact-info">
+            
                     <p class="address">Địa chỉ: 935/7/43C Bình giã / Vũng Tàu</p>
                     <p class="email">Email: tranhuyhoang159753@gmail.com</p>
+                    <p>SĐT:0332369411</p>
                 </div>
             </div>
             <div class="social-icons">
@@ -206,6 +208,13 @@
     const itemsPerView = 2;
     const maxPosition = itemCount - itemsPerView;
     
+    document.querySelector('.gallery-prev').addEventListener('click', () => {
+        if (currentGalleryPosition > 0) {
+            currentGalleryPosition--;
+            gallery.style.transform = `translateX(-${currentGalleryPosition * 35}%)`;
+        }
+    });
+    
     document.querySelector('.gallery-next').addEventListener('click', () => {
         if (currentGalleryPosition < maxPosition) {
             currentGalleryPosition++;
@@ -231,7 +240,27 @@
         el.classList.add('fade-in');
         observer.observe(el);
     });
-    
+    // ... existing code ...
+    // Thêm code xử lý cuộn mượt
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Đóng menu mobile nếu đang mở
+                document.querySelector('.menu').classList.remove('active');
+                document.querySelector('.icon').classList.remove('active');
+                document.querySelector('.icon').innerHTML = '☰';
+            }
+        });
+    });
 </script>
 </body>
 </html>

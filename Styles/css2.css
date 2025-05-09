@@ -854,3 +854,135 @@ color: black;
         opacity: 1;
         transform: translateY(0);
     }
+
+/* Thêm style cho smooth scroll */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px; /* Để tránh bị menu fixed che mất nội dung */
+}
+
+.danhgia {
+    scroll-margin-top: 60px; /* Đảm bảo phần form không bị menu che khi scroll */
+}
+.danhgia-right {
+    flex: 2;
+}
+
+.danhgia-left h1 {
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.danhgia-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.danhgia-right input,
+.danhgia-right textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.phone-send {
+    display: flex;
+    gap: 20px;
+}
+
+.phone-send input {
+    flex: 1;
+}
+
+.phone-send button {
+    padding: 15px 40px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.phone-send button:hover {
+    opacity: 0.9;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contact-info p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #5c4934;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.contact-info p:hover {
+    color: #8B7355;
+    transform: scale(1.02);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+    .intro-text h2, .chandauduongden-text h2 {
+        font-family: 'Playfair Display', serif;  /* Font chữ sang trọng */
+        font-size: 38px;
+        font-weight: 800;
+        color: #000000;
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+        margin-bottom: 20px;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;  /* Chữ in hoa */
+        border-bottom: 2px solid #000;  /* Thêm gạch chân */
+        padding-bottom: 10px;
+    }
+    
+    .intro-text p, .chandauduongden-text p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #000000;    /* Màu đen đậm */
+        font-weight: 600;  /* Tăng độ đậm */
+        text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+    }
+    
+    .intro-text ul li, .chandauduongden-text ul li {
+        font-size: 18px;
+        color: #000000;    /* Màu đen đậm */
+        font-weight: 600;  /* Tăng độ đậm */
+        margin: 12px 0;
+        padding-left: 25px;
+        text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+        position: relative;
+    }
+    
+    .intro-text ul li:before, .chandauduongden-text ul li:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #000000;
+        font-size: 24px;   /* Tăng kích thước dấu chấm */
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .fade-in {
+        opacity: 0;
+        transform: translateY(50%);
+        transition: all 1s ease;
+    }
+    
+    .fade-in.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
